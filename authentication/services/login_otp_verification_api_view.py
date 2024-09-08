@@ -33,6 +33,8 @@ class LoginOtpVerificationApiView(generics.CreateAPIView):
             
             if OTPManager.objects.filter(user=user_obj,otp=serializer.data['otp'],is_used=False).exists():
                 otp_instance = OTPManager.objects.filter(user=user_obj,otp=serializer.data['otp']).last()
+                otp_instance.is_used = True
+                otp_instance.save()
                 if timezone.now() > otp_instance.expired_at:
                     return Response(ResponseHandling.failure_response_message(ERROR,OTP_EXIPRED,None),status=status.HTTP_404_NOT_FOUND)
                 token, refresh_token = user_obj.get_tokens()

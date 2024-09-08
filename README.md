@@ -45,3 +45,4 @@ The Makefile includes the following commands:
 - **make migrate**: Apply database migrations.
 - **make createsuperuser**: Create a Django superuser.
 - **make run**: Start the development server.
+## API docs

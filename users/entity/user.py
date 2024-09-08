@@ -13,8 +13,7 @@ class User(AbstractBaseUser, PermissionsMixin,BaseModel):
     Inherits BaseModel from helper for adding common fields.
     """
     email = models.EmailField(unique=True)
-    name = models.CharField(max_length=255,null=True, blank=True)
-    dob = models.DateField(null=True, blank=True)
+    username = models.CharField(max_length=255,null=True, blank=True,unique=True)
 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
@@ -29,4 +28,4 @@ class User(AbstractBaseUser, PermissionsMixin,BaseModel):
         return str(refresh.access_token), str(refresh)
     
     def __str__(self) :
-        return f'{self.name}'
+        return f'{self.username}'

@@ -32,7 +32,7 @@ Follow these steps to set up and run the project:
     make migrate
 5. **Create a superuser (optional, for admin access):**
     ```bash
-    Create createsuperuser (optional, for admin access):
+    make createsuperuser (optional, for admin access):
     ```
 ## Usage
 - **To start the development server, use:**

@@ -32,7 +32,7 @@ Follow these steps to set up and run the project:
     make migrate
 5. **Create a superuser (optional, for admin access):**
     ```bash
-    Create a superuser (optional, for admin access):
+    Create createsuperuser (optional, for admin access):
     ```
 ## Usage
 - **To start the development server, use:**
@@ -42,6 +42,6 @@ Follow these steps to set up and run the project:
 ## Commands
 The Makefile includes the following commands:
 
-- make migrate: Apply database migrations.
-- make createsuperuser: Create a Django superuser.
-- make run: Start the development server.
+- **make migrate**: Apply database migrations.
+- **make createsuperuser**: Create a Django superuser.
+- **make run**: Start the development server.
